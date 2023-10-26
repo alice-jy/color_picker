@@ -8,11 +8,7 @@ const Color = ({color, setSelectedColor}) => {
 }
 
 const Picker = () => {
-  const [selectedColor, setSelectColor] = useState("");
-
-}
-
-const App = () => {
+  const [selectedColor, setSelectedColor] = useState("");
 
   return (
     <div id="container">
@@ -21,12 +17,23 @@ const App = () => {
         <div className={selectedColor}>{selectedColor}</div>
       </div>
       <div id="colors-list">
-        <Color color="violet" setSelectColor={setSelectColor}></Color>
-        <Color color="red" setSelectColor={setSelectColor}></Color>
-        <Color color="black" setSelectColor={setSelectColor}></Color>
+        <Color color="violet" setSelectedColor={setSelectedColor}></Color>
+        <Color color="red" setSelectedColor={setSelectedColor}></Color>
+        <Color color="black" setSelectedColor={setSelectedColor}></Color>
       </div>
     </div>
   );
+
+}
+
+const App = () => {
+
+  return(
+    <div>
+      <Picker></Picker>
+    </div>
+  )
+  
 };
 
 export default App;
